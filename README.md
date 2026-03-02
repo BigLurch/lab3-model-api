@@ -1,0 +1,53 @@
+# Lab3 - Model API (FastAPI + Docker)
+
+Det här repot innehåller en deploybar ML-tjänst som laddar en exporterad PyTorch-modell (TorchScript) och exponerar en REST-API.
+
+- Modell: TorchScript (`model_store/model.ts`)
+- API: FastAPI
+- Container: Docker
+- Dependency management: uv
+
+## Setup (lokalt)
+
+### 1. Bygg Docker-imagen
+
+```bash
+docker build -t lab3-model-api .
+```
+
+### 2. Starta containern
+
+```bash
+docker run --rm -p 8000:8000 lab3-model-api
+```
+
+Applikationen kör nu på:
+
+```text
+http://localhost:8000
+```
+
+### 3. Testa API:t
+
+Öppna Swagger UI i en webbläsare:
+
+```text
+http://localhost:8000/docs
+```
+
+#### Testa POST /predict
+
+- Klicka på POST /predict
+- Klicka på Try it out
+- Ladda upp en bild (jpg/png)
+- Klicka på Execute
+
+Exempel på response:
+
+```JSON
+{
+    "class_id": 5,
+    "class_name": "dog",
+    "confidence": 0.82
+}
+```

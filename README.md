@@ -51,3 +51,36 @@ Exempel på response:
     "confidence": 0.82
 }
 ```
+
+## Projektstruktur
+
+```text
+.
+├── app/                # FastAPI-applikation
+|   ├── __init__.py
+|   ├── inference.py
+|   ├── main.py
+|   └── schemas.py
+├── model_store/        # TorchScript-modell
+|   └── model.ts
+├── scripts/            # Test script
+|   ├── test_predict.py
+|   └── test_jpg
+├── .dockerignore
+├── .gitignore
+├── .python-version
+├── Dockerfile
+├── main.py
+├── pyproject.toml
+├── README.md
+└── uv.lock
+```
+
+## Uppfyller krav
+
+- Modell exporterad till TorchScript
+- POST /predict implementerad
+- Dockerfile skapad
+- Container går att bygga och starta
+- API returnerar korrekt prediktion
+- Utveckling skett via Feature Branches och Pull Requests

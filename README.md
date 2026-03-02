@@ -84,3 +84,11 @@ Exempel på response:
 - Container går att bygga och starta
 - API returnerar korrekt prediktion
 - Utveckling skett via Feature Branches och Pull Requests
+
+## Pull Requests
+
+- PR 1 - FastAPI integration & Docker:
+  https://github.com/BigLurch/lab3-model-api/pull/1
+
+- PR 2 - Documentation update:
+  https://github.com/BigLurch/lab3-model-api/pull/2
